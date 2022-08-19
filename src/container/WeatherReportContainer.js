@@ -14,13 +14,17 @@ const WeatherReportContainer = () => {
         }
     ]
 
-    const [selectedCity, setSelectedCity] = useState(cities[1]);
+    const [selectedCity, setSelectedCity] = useState(cities[0]);
+
+    const changeCity = (indexInCities) => {
+        setSelectedCity(cities[indexInCities])
+    } 
 
     return(
         <>
             <h1>Container - Weather Report</h1>
             <main>
-                <WeatherList city={selectedCity} />
+                <WeatherList city={selectedCity} changeCity={changeCity} />
             </main>
         </>
     )

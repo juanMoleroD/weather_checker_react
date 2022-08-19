@@ -1,7 +1,7 @@
 import React , {useEffect, useState} from 'react';
 import City from './City';
 
-const WeatherList = ({city}) => {
+const WeatherList = ({city, changeCity}) => {
 
     const [currentWeather, setCurrentWeather] = useState("");
 
@@ -13,13 +13,17 @@ const WeatherList = ({city}) => {
             .then(parcedResponse => setCurrentWeather(parcedResponse))
     }
 
-    useEffect( () => {getWeatherInfo(city)}, [])
+    const handleChangeOfCity = (event) => {
+        changeCity(event.target.value)
+    }
+
+    useEffect( () => {getWeatherInfo(city)}, [city])
 
     return (
         <section className='weather-card'>
             <div className='city-selection'>
-                <button>Glasgow</button>
-                <button>Maracaibo</button>
+                <button value="0" onClick={handleChangeOfCity} >Glasgow</button>
+                <button value="1" onClick={handleChangeOfCity} >Maracaibo</button>
             </div>
                 {currentWeather ? 
                 <City currentWeather={currentWeather} city={city}/> 
