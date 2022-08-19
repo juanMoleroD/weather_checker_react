@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import WeatherList from "../component/WeatherList";
 
-const WeatherReportContainer = () => {
+const WeatherReportContainer = ({weatherCodes}) => {
 
     const cities = [
         {
@@ -24,7 +24,10 @@ const WeatherReportContainer = () => {
         <>
             <h1>Container - Weather Report</h1>
             <main>
-                <WeatherList city={selectedCity} changeCity={changeCity} />
+                <WeatherList 
+                city={selectedCity} 
+                changeCity={changeCity} 
+                weatherCodes={weatherCodes}/>
             </main>
         </>
     )

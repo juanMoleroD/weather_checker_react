@@ -1,7 +1,7 @@
 import React , {useEffect, useState} from 'react';
 import City from './City';
 
-const WeatherList = ({city, changeCity}) => {
+const WeatherList = ({city, changeCity, weatherCodes}) => {
 
     const [currentWeather, setCurrentWeather] = useState("");
 
@@ -26,7 +26,11 @@ const WeatherList = ({city, changeCity}) => {
                 <button value="1" onClick={handleChangeOfCity} >Maracaibo</button>
             </div>
                 {currentWeather ? 
-                <City currentWeather={currentWeather} city={city}/> 
+                <City 
+                    currentWeather={currentWeather} 
+                    city={city}
+                    weatherCodes={weatherCodes}
+                /> 
                 : null
                 }
         </section>
