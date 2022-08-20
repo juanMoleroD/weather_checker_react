@@ -1,3 +1,7 @@
+Weather application using the https://open-meteo.com/en/docs free API and React. Only shows Glasgow and Maracaibo (my two homes) but I 
+plan to extend it further. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
