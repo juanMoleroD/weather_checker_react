@@ -34,10 +34,10 @@ const City = ({ weatherReport, city, weatherCodes }) => {
             <section className="city-content">
                 <h2>{city.name}</h2>
                 <h3>{wmoCodeMeaning}</h3>
-                <p>Temperature Now - {temp}˚C</p>
-                <p>Highest Temp - {maxTemp}˚C</p>
-                <p>Lowest Temp - {minTemp}˚C</p>
-                <p>Wind Speed - {wind} km/h</p>
+                <p>Temperature Now: {temp}˚C</p>
+                <p>Highest Temp: {maxTemp}˚C</p>
+                <p>Lowest Temp: {minTemp}˚C</p>
+                <p>Wind Speed: {wind} km/h</p>
             </section>
             <section className="five-date-forecast-container">
                 <ul>
