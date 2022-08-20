@@ -16,7 +16,41 @@ const City = ({currentWeather, city, weatherCodes}) => {
             <p>Highest Temp - {maxTemp}</p>
             <p>Lowest Temp - {minTemp}</p>
             <p>Wind Speed - {wind}</p>
-            
+            <section className="five-date-forecast-container">
+                <ul>
+                    <li>
+                        <p>Date</p>
+                        <p>WMO</p>
+                        <p>Max Temp</p>
+                        <p>min Temp</p>
+                    </li>
+                    <li>
+                        <p>Date</p>
+                        <p>WMO</p>
+                        <p>Max Temp</p>
+                        <p>min Temp</p>
+                    </li>
+                    <li>
+                        <p>Date</p>
+                        <p>WMO</p>
+                        <p>Max Temp</p>
+                        <p>min Temp</p>
+                    </li>
+                    <li>
+                        <p>Date</p>
+                        <p>WMO</p>
+                        <p>Max Temp</p>
+                        <p>min Temp</p>
+                    </li>
+                    <li>
+                        <p>Date</p>
+                        <p>WMO</p>
+                        <p>Max Temp</p>
+                        <p>min Temp</p>
+                    </li>
+
+                </ul>
+            </section> 
         </section>
     )
 }

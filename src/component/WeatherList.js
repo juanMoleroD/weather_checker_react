@@ -6,7 +6,8 @@ const WeatherList = ({city, changeCity, weatherCodes}) => {
     const [currentWeather, setCurrentWeather] = useState("");
 
     const getWeatherInfo = (cityToGetWeather) => {
-        const url = `https://api.open-meteo.com/v1/forecast?${cityToGetWeather.coordinatesFormated}&current_weather=true`
+        const urlSelectors = `&timezone=GMT&current_weather=true&daily=temperature_2m_max&daily=temperature_2m_min&daily=weathercode`
+        const url = `https://api.open-meteo.com/v1/forecast?${cityToGetWeather.coordinatesFormated}${urlSelectors}`
         fetch(url)
             .catch(error => console.error)
             .then(rawResponse => rawResponse.json())

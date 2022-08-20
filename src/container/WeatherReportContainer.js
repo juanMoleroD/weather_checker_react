@@ -22,7 +22,9 @@ const WeatherReportContainer = ({weatherCodes}) => {
 
     return(
         <>
-            <h1>Container - Weather Report</h1>
+            <header>
+                <h1 id="main-heading">Weather Report</h1>
+            </header>
             <main>
                 <WeatherList 
                 city={selectedCity} 
