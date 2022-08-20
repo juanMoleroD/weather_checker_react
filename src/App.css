@@ -24,8 +24,24 @@ body {
 }
 
 .city-selection {
+  padding: 0px 0px;
+  margin: 0px 0px;
   border: 2px solid black;
   height: 100px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;  
+}
+
+.city-selection > li {
+  border: 1px solid black;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  font-size: 30px;
 }
 
 .city-content {
@@ -33,10 +49,9 @@ body {
   
 }
 
-.five-date-forecast-container {
-  border: 2px solid black;
-  
-}
+/* .five-date-forecast-container {
+
+} */
 
 .five-date-forecast-container > ul {
   padding-left: 0;
@@ -50,7 +65,15 @@ body {
 }
 
 .five-date-forecast-container > ul > li {
-  border: 2px solid black;
+  border: 1px solid black;
   width: 20%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+.five-date-forecast-container > ul > li > p {
+  margin: 0;
 }

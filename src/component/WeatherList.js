@@ -3,7 +3,7 @@ import City from './City';
 
 const WeatherList = ({city, changeCity, weatherCodes}) => {
 
-    const [currentWeather, setCurrentWeather] = useState("");
+    const [weatherReport, setweatherReport] = useState("");
 
     const getWeatherInfo = (cityToGetWeather) => {
         const urlSelectors = `&timezone=GMT&current_weather=true&daily=temperature_2m_max&daily=temperature_2m_min&daily=weathercode`
@@ -11,7 +11,7 @@ const WeatherList = ({city, changeCity, weatherCodes}) => {
         fetch(url)
             .catch(error => console.error)
             .then(rawResponse => rawResponse.json())
-            .then(parcedResponse => setCurrentWeather(parcedResponse))
+            .then(parcedResponse => setweatherReport(parcedResponse))
     }
 
     const handleChangeOfCity = (event) => {
@@ -22,13 +22,13 @@ const WeatherList = ({city, changeCity, weatherCodes}) => {
 
     return (
         <section className='weather-card'>
-            <div className='city-selection'>
-                <button value="0" onClick={handleChangeOfCity} >Glasgow</button>
-                <button value="1" onClick={handleChangeOfCity} >Maracaibo</button>
-            </div>
-                {currentWeather ? 
+            <ul className='city-selection'>
+                <li value="0" onClick={handleChangeOfCity} >Glasgow, UK</li>
+                <li value="1" onClick={handleChangeOfCity} >Maracaibo, VE</li>
+            </ul>
+                {weatherReport ? 
                 <City 
-                    currentWeather={currentWeather} 
+                    weatherReport={weatherReport} 
                     city={city}
                     weatherCodes={weatherCodes}
                 /> 
